@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DarboLaikoSkaiciavimoSistema.Properties
-{
-
-
+namespace DarboLaikoSkaiciavimoSistema.Properties {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -19,52 +19,128 @@ namespace DarboLaikoSkaiciavimoSistema.Properties
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources
-    {
-
+    internal class Resources {
+        
         private static global::System.Resources.ResourceManager resourceMan;
-
+        
         private static global::System.Globalization.CultureInfo resourceCulture;
-
+        
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources()
-        {
+        internal Resources() {
         }
-
+        
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager
-        {
-            get
-            {
-                if ((resourceMan == null))
-                {
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DarboLaikoSkaiciavimoSistema.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
-
+        
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture
-        {
-            get
-            {
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
                 return resourceCulture;
             }
-            set
-            {
+            set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Your password reset code is/Jūsų slaptažodžio atkūrimo kodas yra:&lt;/p&gt;
+        ///&lt;h2&gt;{0}&lt;/h2&gt;&lt;br&gt;&lt;br&gt;
+        ///&lt;p&gt;Automatic Working Time Tracking System&lt;br&gt;
+        ///Automatinė darbo laiko sekimo sistema&lt;/p&gt;.
+        /// </summary>
+        internal static string mailBody {
+            get {
+                return ResourceManager.GetString("mailBody", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to awtts234Admin.
+        /// </summary>
+        internal static string mailPassword {
+            get {
+                return ResourceManager.GetString("mailPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 465.
+        /// </summary>
+        internal static string mailPortSSL {
+            get {
+                return ResourceManager.GetString("mailPortSSL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 587.
+        /// </summary>
+        internal static string mailPortTLS {
+            get {
+                return ResourceManager.GetString("mailPortTLS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to smtp.gmail.com.
+        /// </summary>
+        internal static string mailServer {
+            get {
+                return ResourceManager.GetString("mailServer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password reset/Slaptažodžio atkūrimas.
+        /// </summary>
+        internal static string mailSubject {
+            get {
+                return ResourceManager.GetString("mailSubject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to mailer.awtts@gmail.com.
+        /// </summary>
+        internal static string mailUsername {
+            get {
+                return ResourceManager.GetString("mailUsername", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to rtsp://{0}:{1}@{2}:{3}/Streaming/tracks/{4}01?starttime={5}&amp;endtime={6}.
+        /// </summary>
+        internal static string recordingURL {
+            get {
+                return ResourceManager.GetString("recordingURL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to rtsp://{0}:{1}@{2}:{3}/Streaming/channels/{4}01.
+        /// </summary>
+        internal static string streamURL {
+            get {
+                return ResourceManager.GetString("streamURL", resourceCulture);
             }
         }
     }

@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="dlssdb.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Entry">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="user_id" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="card_id" Type="nvarchar" MaxLength="50" />
+          <Property Name="user_name" Type="nvarchar" MaxLength="100" />
+          <Property Name="direction" Type="nvarchar" MaxLength="20" />
+          <Property Name="device_name" Type="nvarchar(max)" />
+          <Property Name="device_serial_no" Type="nvarchar(max)" />
+          <Property Name="auth_datetime" Type="datetime" />
+          <Property Name="auth_date" Type="date" />
+          <Property Name="auth_time" Type="time" Precision="7" />
+        </EntityType>
+        <EntityType Name="Settings">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NVRIP" Type="nvarchar" MaxLength="50" />
+          <Property Name="NVRPort" Type="int" />
+          <Property Name="NVRUsername" Type="nvarchar" MaxLength="255" />
+          <Property Name="NVRPassword" Type="nvarchar" MaxLength="255" />
+          <Property Name="AccessControllerIP" Type="nvarchar" MaxLength="50" />
+          <Property Name="AccessControllerPort" Type="int" />
+          <Property Name="AccessControllerUsername" Type="nvarchar" MaxLength="255" />
+          <Property Name="AccessControllerPassword" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="100" />
+          <Property Name="surname" Type="nvarchar" MaxLength="100" />
+          <Property Name="card_id" Type="nvarchar" MaxLength="50" />
+          <Property Name="username" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="password" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="email" Type="nvarchar" MaxLength="100" />
+          <Property Name="access_level" Type="int" Nullable="false" />
+          <Property Name="work_hours_in_week" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="dlssdbStoreContainer">
+          <EntitySet Name="Entry" EntityType="Self.Entry" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Settings" EntityType="Self.Settings" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="dlssdb" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Entry">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="user_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="card_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="user_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="direction" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="device_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="device_serial_no" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="auth_datetime" Type="DateTime" Precision="3" />
+          <Property Name="auth_date" Type="DateTime" Precision="0" />
+          <Property Name="auth_time" Type="Time" Precision="7" />
+        </EntityType>
+        <EntityType Name="Setting">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NVRIP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NVRPort" Type="Int32" />
+          <Property Name="NVRUsername" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="NVRPassword" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="AccessControllerIP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AccessControllerPort" Type="Int32" />
+          <Property Name="AccessControllerUsername" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="AccessControllerPassword" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="surname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="card_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="username" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="access_level" Type="Int32" Nullable="false" />
+          <Property Name="work_hours_in_week" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="dlssdbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Entries" EntityType="Self.Entry" />
+          <EntitySet Name="Settings" EntityType="Self.Setting" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="dlssdbStoreContainer" CdmEntityContainer="dlssdbEntities">
+          <EntitySetMapping Name="Entries">
+            <EntityTypeMapping TypeName="dlssdb.Entry">
+              <MappingFragment StoreEntitySet="Entry">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="card_id" ColumnName="card_id" />
+                <ScalarProperty Name="user_name" ColumnName="user_name" />
+                <ScalarProperty Name="direction" ColumnName="direction" />
+                <ScalarProperty Name="device_name" ColumnName="device_name" />
+                <ScalarProperty Name="device_serial_no" ColumnName="device_serial_no" />
+                <ScalarProperty Name="auth_datetime" ColumnName="auth_datetime" />
+                <ScalarProperty Name="auth_date" ColumnName="auth_date" />
+                <ScalarProperty Name="auth_time" ColumnName="auth_time" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Settings">
+            <EntityTypeMapping TypeName="dlssdb.Setting">
+              <MappingFragment StoreEntitySet="Settings">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="NVRIP" ColumnName="NVRIP" />
+                <ScalarProperty Name="NVRPort" ColumnName="NVRPort" />
+                <ScalarProperty Name="NVRUsername" ColumnName="NVRUsername" />
+                <ScalarProperty Name="NVRPassword" ColumnName="NVRPassword" />
+                <ScalarProperty Name="AccessControllerIP" ColumnName="AccessControllerIP" />
+                <ScalarProperty Name="AccessControllerPort" ColumnName="AccessControllerPort" />
+                <ScalarProperty Name="AccessControllerUsername" ColumnName="AccessControllerUsername" />
+                <ScalarProperty Name="AccessControllerPassword" ColumnName="AccessControllerPassword" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="dlssdb.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="surname" ColumnName="surname" />
+                <ScalarProperty Name="card_id" ColumnName="card_id" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="access_level" ColumnName="access_level" />
+                <ScalarProperty Name="work_hours_in_week" ColumnName="work_hours_in_week" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,377 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="appName" xml:space="preserve">
+    <value>Darbo laiko skaičiavimo sistema</value>
+  </data>
+  <data name="btnBack" xml:space="preserve">
+    <value>Atgal</value>
+  </data>
+  <data name="btnDelete" xml:space="preserve">
+    <value>Pašalinti</value>
+  </data>
+  <data name="btnEdit" xml:space="preserve">
+    <value>Redaguoti</value>
+  </data>
+  <data name="btnForgotPassword" xml:space="preserve">
+    <value>Pamiršau slaptažodį</value>
+  </data>
+  <data name="btnLiveFeed" xml:space="preserve">
+    <value>Dabartinis patalpų vaizdas</value>
+  </data>
+  <data name="btnLogin" xml:space="preserve">
+    <value>Prisijungti</value>
+  </data>
+  <data name="btnLogout" xml:space="preserve">
+    <value>Atsijungti</value>
+  </data>
+  <data name="btnRecordings" xml:space="preserve">
+    <value>Vaizdo įrašo peržiūra</value>
+  </data>
+  <data name="btnRegister" xml:space="preserve">
+    <value>Registruoti</value>
+  </data>
+  <data name="btnRegisterUser" xml:space="preserve">
+    <value>Registruoti darbuotoją</value>
+  </data>
+  <data name="btnResetPassword" xml:space="preserve">
+    <value>Keisti slaptažodį</value>
+  </data>
+  <data name="btnSave" xml:space="preserve">
+    <value>Išsaugoti</value>
+  </data>
+  <data name="btnSelect" xml:space="preserve">
+    <value>Pasirinkti</value>
+  </data>
+  <data name="btnSendCode" xml:space="preserve">
+    <value>Siųsti kodą</value>
+  </data>
+  <data name="btnSettings" xml:space="preserve">
+    <value>Sistemos nustatymai</value>
+  </data>
+  <data name="btnStatistics" xml:space="preserve">
+    <value>Darbo laiko statistika</value>
+  </data>
+  <data name="btnUsers" xml:space="preserve">
+    <value>Darbuotojų sąrašas</value>
+  </data>
+  <data name="cbRememberMe" xml:space="preserve">
+    <value>Prisiminti</value>
+  </data>
+  <data name="errAccessController" xml:space="preserve">
+    <value>Įeigos kontrolės įrenginio klaida!</value>
+  </data>
+  <data name="errCardIdTaken" xml:space="preserve">
+    <value>Nurodytas kortelės nr. jau užregistruotas!</value>
+  </data>
+  <data name="errDatabase" xml:space="preserve">
+    <value>Duomenų bazės klaida!</value>
+  </data>
+  <data name="errEmptyFields" xml:space="preserve">
+    <value>Prašome užpildyti visus laukelius!</value>
+  </data>
+  <data name="errInvalidEmail" xml:space="preserve">
+    <value>Netinkamas el. pašto adresas!</value>
+  </data>
+  <data name="errNoVideo" xml:space="preserve">
+    <value>Nepavyko gauti vaizdo medžiagos!</value>
+  </data>
+  <data name="errPasswordsDoNotMatch" xml:space="preserve">
+    <value>Įvesti slaptažodžiai nesutampa!</value>
+  </data>
+  <data name="errPasswordTooWeak" xml:space="preserve">
+    <value>Įvestas slaptažodis per silpnas!</value>
+  </data>
+  <data name="errResetCode" xml:space="preserve">
+    <value>Neteisingas slaptažodžio atkūrimo kodas</value>
+  </data>
+  <data name="errTime" xml:space="preserve">
+    <value>Pradžios laiko reikšmė turi būti mažesnė už pabaigos laiko reikšmę!</value>
+  </data>
+  <data name="errTitle" xml:space="preserve">
+    <value>Klaida!</value>
+  </data>
+  <data name="errUser" xml:space="preserve">
+    <value>Nepavyko gauti naudotojo duomenų!</value>
+  </data>
+  <data name="errUsernameTaken" xml:space="preserve">
+    <value>Toks naudotojo vardas jau egzistuoja!</value>
+  </data>
+  <data name="errWrongCredentials" xml:space="preserve">
+    <value>Prisijungimo vardas arba slaptažodis neteisingas!</value>
+  </data>
+  <data name="infoCodeSent" xml:space="preserve">
+    <value>Slaptažodžio atkūrimo kodas išsiųstas nurodytu el. pašto adresu, jeigu jis yra užregistruotas</value>
+  </data>
+  <data name="infoPasswordChanged" xml:space="preserve">
+    <value>Slaptažodis pakeistas sėkmingai!</value>
+  </data>
+  <data name="infoSettingsSaved" xml:space="preserve">
+    <value>Sistemos nustatymai sėkmingai išsaugoti</value>
+  </data>
+  <data name="infoTitle" xml:space="preserve">
+    <value>Informacija</value>
+  </data>
+  <data name="infoUserRegistered" xml:space="preserve">
+    <value>Darbuotojas užregistruotas sėkmingai!</value>
+  </data>
+  <data name="lblAccessControllerIP" xml:space="preserve">
+    <value>Įeigos kontrolės įrenginio IP adresas</value>
+  </data>
+  <data name="lblAccessControllerPassword" xml:space="preserve">
+    <value>Įeigos kontrolės įrenginio prisijungimo slaptažodis</value>
+  </data>
+  <data name="lblAccessControllerPort" xml:space="preserve">
+    <value>Įeigos kontrolės įrenginio prievadas</value>
+  </data>
+  <data name="lblAccessControllerUsername" xml:space="preserve">
+    <value>Įeigos kontrolės įrenginio prisijungimo vardas</value>
+  </data>
+  <data name="lblAccessLevel" xml:space="preserve">
+    <value>Pareigos</value>
+  </data>
+  <data name="lblCardNumber" xml:space="preserve">
+    <value>Kortelės nr.</value>
+  </data>
+  <data name="lblChannel" xml:space="preserve">
+    <value>Kameros ID</value>
+  </data>
+  <data name="lblConfirmNewPassword" xml:space="preserve">
+    <value>Patvirtinti naują slaptažodį</value>
+  </data>
+  <data name="lblConfirmPassword" xml:space="preserve">
+    <value>Patvirtinti slaptažodį</value>
+  </data>
+  <data name="lblEmail" xml:space="preserve">
+    <value>El. paštas</value>
+  </data>
+  <data name="lblEndTime" xml:space="preserve">
+    <value>Vaizdo įrašo pabaigos laikas:</value>
+  </data>
+  <data name="lblExtraTimeMonthLabel" xml:space="preserve">
+    <value>Papildomas laikas šį mėnesį:</value>
+  </data>
+  <data name="lblName" xml:space="preserve">
+    <value>Vardas</value>
+  </data>
+  <data name="lblNewPassword" xml:space="preserve">
+    <value>Naujas slaptažodis</value>
+  </data>
+  <data name="lblNVRIP" xml:space="preserve">
+    <value>NVR IP adresas</value>
+  </data>
+  <data name="lblNVRPassword" xml:space="preserve">
+    <value>NVR prisijungimo slaptažodis</value>
+  </data>
+  <data name="lblNVRPort" xml:space="preserve">
+    <value>NVR RTSP prievadas</value>
+  </data>
+  <data name="lblNVRUsername" xml:space="preserve">
+    <value>NVR prisijungimo vardas</value>
+  </data>
+  <data name="lblPassword" xml:space="preserve">
+    <value>Slaptažodis</value>
+  </data>
+  <data name="lblPasswordRequirements" xml:space="preserve">
+    <value>Slaptažodis turi būti sudarytas iš:
+• Ne mažiau kaip 8 simbolių
+• Bent vienos mažosios raidės
+• Bent vienos didžiosios raidės
+• Bent vieno skaitmens</value>
+  </data>
+  <data name="lblRemainingTimeMonthLabel" xml:space="preserve">
+    <value>Likęs darbo laikas šį mėnesį:</value>
+  </data>
+  <data name="lblRemainingTimeTodayLabel" xml:space="preserve">
+    <value>Likęs darbo laikas šiandien:</value>
+  </data>
+  <data name="lblRemainingTimeWeekLabel" xml:space="preserve">
+    <value>Likęs darbo laikas šią savaitę:</value>
+  </data>
+  <data name="lblResetCode" xml:space="preserve">
+    <value>Slaptažodžio atkūrimo kodas</value>
+  </data>
+  <data name="lblResetCodeInfo" xml:space="preserve">
+    <value>Jūsų el. pašto adresu bus išsiųstas slaptažodžio atkūrimo kodas. 
+Patikrinkite ir šlamšto aplanką.</value>
+  </data>
+  <data name="lblStartTime" xml:space="preserve">
+    <value>Vaizdo įrašo pradžios laikas:</value>
+  </data>
+  <data name="lblSurname" xml:space="preserve">
+    <value>Pavardė</value>
+  </data>
+  <data name="lblTimeWorkedThisMonth" xml:space="preserve">
+    <value>Išdirbtas laikas šį mėnesį (h)</value>
+  </data>
+  <data name="lblTimeWorkedThisWeek" xml:space="preserve">
+    <value>Išdirbtas laikas šią savaitę (h)</value>
+  </data>
+  <data name="lblUsername" xml:space="preserve">
+    <value>Prisijungimo vardas</value>
+  </data>
+  <data name="lblWorkHoursPerWeek" xml:space="preserve">
+    <value>Darbo valandos per savaitę:</value>
+  </data>
+  <data name="loginViewName" xml:space="preserve">
+    <value>Prisijungimas</value>
+  </data>
+  <data name="mainViewName" xml:space="preserve">
+    <value>Pagrindinis meniu</value>
+  </data>
+  <data name="passwordResetViewName" xml:space="preserve">
+    <value>Slaptažodžio keitimas</value>
+  </data>
+  <data name="settingsViewName" xml:space="preserve">
+    <value>Sistemos nustatymai</value>
+  </data>
+  <data name="statisticsViewName" xml:space="preserve">
+    <value>Darbo laiko statistika</value>
+  </data>
+  <data name="userEditViewName" xml:space="preserve">
+    <value>Redaguoti darbuotojo informaciją</value>
+  </data>
+  <data name="userListViewName" xml:space="preserve">
+    <value>Darbuotojų sąrašas</value>
+  </data>
+  <data name="userRegistrationViewName" xml:space="preserve">
+    <value>Darbuotojo registracija</value>
+  </data>
+  <data name="videoSourceViewName" xml:space="preserve">
+    <value>Vaizdo šaltinio pasirinkimas</value>
+  </data>
+  <data name="videoViewRecordingName" xml:space="preserve">
+    <value>{0} kameros vaizdo įrašas (Nuo {1} iki {2})</value>
+  </data>
+  <data name="videoViewStreamName" xml:space="preserve">
+    <value>Dabartinis {0} kameros vaizdas</value>
+  </data>
+  <data name="warningDeleteUser" xml:space="preserve">
+    <value>Ar tikrai norite pašalinti darbuotoją?</value>
+  </data>
+  <data name="warningEditUser" xml:space="preserve">
+    <value>Ar tikrai norite pakeisti darbuotojo informaciją?</value>
+  </data>
+  <data name="warningLogout" xml:space="preserve">
+    <value>Ar tikrai norite atsijungti?</value>
+  </data>
+  <data name="warningTitle" xml:space="preserve">
+    <value>Įspėjimas</value>
+  </data>
+</root>

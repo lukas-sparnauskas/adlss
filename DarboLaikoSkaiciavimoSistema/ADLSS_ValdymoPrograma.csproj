@@ -1,0 +1,500 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\SQLite.3.13.0\build\net45\SQLite.props" Condition="Exists('..\packages\SQLite.3.13.0\build\net45\SQLite.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{02C0F8C4-8199-409E-966B-62BE803E5529}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DarboLaikoSkaiciavimoSistema</RootNamespace>
+    <AssemblyName>DarboLaikoSkaiciavimoSistema</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BCrypt.Net-Next, Version=4.0.2.0, Culture=neutral, PublicKeyToken=1e11be04b6288443, processorArchitecture=MSIL">
+      <HintPath>..\packages\BCrypt.Net-Next.4.0.2\lib\net472\BCrypt.Net-Next.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.0.78\lib\net461\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Media, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\net7mma.0.111192.1\lib\net452\Media.dll</HintPath>
+    </Reference>
+    <Reference Include="Media.Codec, Version=1.0.7.41643, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\net7mma.0.111192.1\lib\net452\Media.Codec.dll</HintPath>
+    </Reference>
+    <Reference Include="Media.Codecs.Image, Version=1.0.7.41646, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\net7mma.0.111192.1\lib\net452\Media.Codecs.Image.dll</HintPath>
+    </Reference>
+    <Reference Include="Media.Codecs.Video.H264, Version=1.0.7.41646, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\net7mma.0.111192.1\lib\net452\Media.Codecs.Video.H264.dll</HintPath>
+    </Reference>
+    <Reference Include="Media.Common, Version=1.0.7.41642, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\net7mma.0.111192.1\lib\net452\Media.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Media.Compression, Version=1.0.7.41643, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\net7mma.0.111192.1\lib\net452\Media.Compression.dll</HintPath>
+    </Reference>
+    <Reference Include="Media.Container, Version=1.0.7.41643, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\net7mma.0.111192.1\lib\net452\Media.Container.dll</HintPath>
+    </Reference>
+    <Reference Include="Media.Containers.Mpeg, Version=1.0.7.41645, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\net7mma.0.111192.1\lib\net452\Media.Containers.Mpeg.dll</HintPath>
+    </Reference>
+    <Reference Include="Media.Ntp, Version=1.0.7.41643, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\net7mma.0.111192.1\lib\net452\Media.Ntp.dll</HintPath>
+    </Reference>
+    <Reference Include="Media.Rtmp, Version=1.0.7.41644, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\net7mma.0.111192.1\lib\net452\Media.Rtmp.dll</HintPath>
+    </Reference>
+    <Reference Include="Media.Rtp, Version=1.0.7.41643, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\net7mma.0.111192.1\lib\net452\Media.Rtp.dll</HintPath>
+    </Reference>
+    <Reference Include="Media.RtpTools, Version=1.0.7.41644, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\net7mma.0.111192.1\lib\net452\Media.RtpTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Media.Rtsp, Version=1.0.7.41644, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\net7mma.0.111192.1\lib\net452\Media.Rtsp.dll</HintPath>
+    </Reference>
+    <Reference Include="Media.RtspServer, Version=1.0.7.41647, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\net7mma.0.111192.1\lib\net452\Media.RtspServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Media.Sdp, Version=1.0.7.41643, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\net7mma.0.111192.1\lib\net452\Media.Sdp.dll</HintPath>
+    </Reference>
+    <Reference Include="PInvoke.Kernel32, Version=0.7.0.0, Culture=neutral, PublicKeyToken=9e300f9f87f04a7a, processorArchitecture=MSIL">
+      <HintPath>..\packages\PInvoke.Kernel32.0.7.104\lib\net46\PInvoke.Kernel32.dll</HintPath>
+    </Reference>
+    <Reference Include="PInvoke.Windows.Core, Version=0.7.0.0, Culture=neutral, PublicKeyToken=9e300f9f87f04a7a, processorArchitecture=MSIL">
+      <HintPath>..\packages\PInvoke.Windows.Core.0.7.104\lib\net45\PInvoke.Windows.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.113.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Vlc.DotNet.Core, Version=3.1.0.0, Culture=neutral, PublicKeyToken=84529da31f4eb963, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vlc.DotNet.Core.3.1.0\lib\net45\Vlc.DotNet.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Vlc.DotNet.Core.Interops, Version=3.1.0.0, Culture=neutral, PublicKeyToken=84529da31f4eb963, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vlc.DotNet.Core.Interops.3.1.0\lib\net45\Vlc.DotNet.Core.Interops.dll</HintPath>
+    </Reference>
+    <Reference Include="Vlc.DotNet.Forms, Version=3.1.0.0, Culture=neutral, PublicKeyToken=84529da31f4eb963, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vlc.DotNet.Forms.3.1.0\lib\net45\Vlc.DotNet.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Vlc.DotNet.Wpf, Version=3.1.0.0, Culture=neutral, PublicKeyToken=84529da31f4eb963, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vlc.DotNet.Wpf.3.1.0\lib\net45\Vlc.DotNet.Wpf.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cache\LocalCache.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\SettingsController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\VideoController.cs" />
+    <Compile Include="Controllers\WorkingTimeController.cs" />
+    <Compile Include="Controls\BackNavigatorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\BackNavigatorControl.Designer.cs">
+      <DependentUpon>BackNavigatorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LocalizationControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\LocalizationControl.Designer.cs">
+      <DependentUpon>LocalizationControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UserInfoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UserInfoControl.Designer.cs">
+      <DependentUpon>UserInfoControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dbUsers.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbUsers.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormLocalized.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Enums.cs" />
+    <Compile Include="HCNetSDK.cs" />
+    <Compile Include="Models\Entry.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Settings.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Strings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Strings.lt1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Strings.lt.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\LoginView.Designer.cs">
+      <DependentUpon>LoginView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\MainView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MainView.Designer.cs">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PasswordResetEmailView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PasswordResetEmailView.Designer.cs">
+      <DependentUpon>PasswordResetEmailView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PasswordResetView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PasswordResetView.Designer.cs">
+      <DependentUpon>PasswordResetView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SettingsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SettingsView.Designer.cs">
+      <DependentUpon>SettingsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StatisticsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\StatisticsView.Designer.cs">
+      <DependentUpon>StatisticsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserEditView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UserEditView.Designer.cs">
+      <DependentUpon>UserEditView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserListView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UserListView.Designer.cs">
+      <DependentUpon>UserListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserRegistrationView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UserRegistrationView.Designer.cs">
+      <DependentUpon>UserRegistrationView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\VideoView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\VideoView.Designer.cs">
+      <DependentUpon>VideoView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\VideoSourceView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\VideoSourceView.Designer.cs">
+      <DependentUpon>VideoSourceView.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Controls\BackNavigatorControl.resx">
+      <DependentUpon>BackNavigatorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LocalizationControl.resx">
+      <DependentUpon>LocalizationControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UserInfoControl.resx">
+      <DependentUpon>UserInfoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Strings.lt.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.lt1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Strings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoginView.resx">
+      <DependentUpon>LoginView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Views\MainView.resx">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PasswordResetEmailView.resx">
+      <DependentUpon>PasswordResetEmailView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PasswordResetView.resx">
+      <DependentUpon>PasswordResetView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SettingsView.resx">
+      <DependentUpon>SettingsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StatisticsView.resx">
+      <DependentUpon>StatisticsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserEditView.resx">
+      <DependentUpon>UserEditView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserListView.resx">
+      <DependentUpon>UserListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserRegistrationView.resx">
+      <DependentUpon>UserRegistrationView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\VideoView.resx">
+      <DependentUpon>VideoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\VideoSourceView.resx">
+      <DependentUpon>VideoSourceView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="Models\Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="dbUsers.xsc">
+      <DependentUpon>dbUsers.xsd</DependentUpon>
+    </None>
+    <None Include="dbUsers.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbUsers.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbUsers.xss">
+      <DependentUpon>dbUsers.xsd</DependentUpon>
+    </None>
+    <None Include="HCNetSDK\GdiPlus.lib" />
+    <None Include="HCNetSDK\HCCore.lib" />
+    <None Include="HCNetSDK\HCNetSDK.lib" />
+    <None Include="HCNetSDK\HCNetSDKCom\HCAlarm.lib" />
+    <None Include="HCNetSDK\HCNetSDKCom\HCGeneralCfgMgr.lib" />
+    <None Include="HCNetSDK\HCNetSDKCom\HCPreview.lib" />
+    <None Include="HCNetSDK\PlayCtrl.lib" />
+    <None Include="Models\Model.edmx.diagram">
+      <DependentUpon>Model.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Cache\Cache.mdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Cache\Cache_log.ldf">
+      <DependentUpon>Cache.mdf</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="HCNetSDK\-·+-+G+-+¦++¦¦¦+++-+-+--.txt" />
+    <Content Include="HCNetSDK\AudioRender.dll" />
+    <Content Include="HCNetSDK\EagleEyeRender.dll" />
+    <Content Include="HCNetSDK\GdiPlus.dll" />
+    <Content Include="HCNetSDK\HCCore.dll" />
+    <Content Include="HCNetSDK\HCNetSDK.dll" />
+    <Content Include="HCNetSDK\HCNetSDKCom\AnalyzeData.dll" />
+    <Content Include="HCNetSDK\HCNetSDKCom\AudioIntercom.dll" />
+    <Content Include="HCNetSDK\HCNetSDKCom\HCAlarm.dll" />
+    <Content Include="HCNetSDK\HCNetSDKCom\HCCoreDevCfg.dll" />
+    <Content Include="HCNetSDK\HCNetSDKCom\HCDisplay.dll" />
+    <Content Include="HCNetSDK\HCNetSDKCom\HCGeneralCfgMgr.dll" />
+    <Content Include="HCNetSDK\HCNetSDKCom\HCIndustry.dll" />
+    <Content Include="HCNetSDK\HCNetSDKCom\HCPlayBack.dll" />
+    <Content Include="HCNetSDK\HCNetSDKCom\HCPreview.dll" />
+    <Content Include="HCNetSDK\HCNetSDKCom\HCVoiceTalk.dll" />
+    <Content Include="HCNetSDK\HCNetSDKCom\libiconv2.dll" />
+    <Content Include="HCNetSDK\HCNetSDKCom\OpenAL32.dll" />
+    <Content Include="HCNetSDK\HCNetSDKCom\StreamTransClient.dll" />
+    <Content Include="HCNetSDK\HCNetSDKCom\SystemTransform.dll" />
+    <Content Include="HCNetSDK\hlog.dll" />
+    <Content Include="HCNetSDK\hpr.dll" />
+    <Content Include="HCNetSDK\HXVA.dll" />
+    <Content Include="HCNetSDK\libeay32.dll" />
+    <Content Include="HCNetSDK\libmmd.dll" />
+    <Content Include="HCNetSDK\MP_Render.dll" />
+    <Content Include="HCNetSDK\NPQos.dll" />
+    <Content Include="HCNetSDK\PlayCtrl.dll" />
+    <Content Include="HCNetSDK\ssleay32.dll" />
+    <Content Include="HCNetSDK\SuperRender.dll" />
+    <Content Include="HCNetSDK\YUVProcess.dll" />
+    <Content Include="Images\EN_icon.png" />
+    <Content Include="Images\LT_icon.png" />
+    <Content Include="Models\Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model.Context.cs</LastGenOutput>
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.113.3\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\SQLite.3.13.0\build\net45\SQLite.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SQLite.3.13.0\build\net45\SQLite.props'))" />
+    <Error Condition="!Exists('..\packages\VideoLAN.LibVLC.Windows.3.0.14\build\VideoLAN.LibVLC.Windows.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\VideoLAN.LibVLC.Windows.3.0.14\build\VideoLAN.LibVLC.Windows.targets'))" />
+  </Target>
+  <Import Project="..\packages\VideoLAN.LibVLC.Windows.3.0.14\build\VideoLAN.LibVLC.Windows.targets" Condition="Exists('..\packages\VideoLAN.LibVLC.Windows.3.0.14\build\VideoLAN.LibVLC.Windows.targets')" />
+</Project>
