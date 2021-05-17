@@ -33,11 +33,10 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
-            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.cbRememberMe = new System.Windows.Forms.CheckBox();
             this.localizationControl1 = new DarboLaikoSkaiciavimoSistema.Controls.LocalizationControl();
             this.btnForgotPassword = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tbUsername
@@ -84,14 +83,6 @@
             this.lblPassword.TabIndex = 4;
             this.lblPassword.Text = "label2";
             // 
-            // pbLogo
-            // 
-            this.pbLogo.Location = new System.Drawing.Point(158, 61);
-            this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(239, 66);
-            this.pbLogo.TabIndex = 7;
-            this.pbLogo.TabStop = false;
-            // 
             // cbRememberMe
             // 
             this.cbRememberMe.AutoSize = true;
@@ -119,15 +110,26 @@
             this.btnForgotPassword.UseVisualStyleBackColor = true;
             this.btnForgotPassword.Click += new System.EventHandler(this.btnForgotPassword_Click);
             // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoEllipsis = true;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(158, 62);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(239, 69);
+            this.lblTitle.TabIndex = 11;
+            this.lblTitle.Text = "label1";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // LoginView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(565, 326);
+            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnForgotPassword);
             this.Controls.Add(this.localizationControl1);
             this.Controls.Add(this.cbRememberMe);
-            this.Controls.Add(this.pbLogo);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.btnLogin);
@@ -138,7 +140,6 @@
             this.Name = "LoginView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,10 +152,10 @@
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.PictureBox pbLogo;
         private System.Windows.Forms.CheckBox cbRememberMe;
         private Controls.LocalizationControl localizationControl1;
         private System.Windows.Forms.Button btnForgotPassword;
+        private System.Windows.Forms.Label lblTitle;
     }
 }
 

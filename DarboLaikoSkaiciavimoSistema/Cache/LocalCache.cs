@@ -1,5 +1,8 @@
 ﻿using System.Configuration;
 using System.Data.SqlClient;
+using System.IO;
+using System.Security.AccessControl;
+using System.Security.Principal;
 
 namespace DarboLaikoSkaiciavimoSistema.Cache
 {
@@ -159,6 +162,17 @@ namespace DarboLaikoSkaiciavimoSistema.Cache
         private static string LoadConnectionString()
         {
             return ConfigurationManager.ConnectionStrings["Cache"].ConnectionString;
+        }
+
+        /// <summary>
+        /// Prieigos prie lokalios duomenų bazės suteikimas.
+        /// </summary>
+        public static void SetDBAccess()
+        {
+            DirectoryInfo dInfo = new DirectoryInfo(Directory.GetCurrentDirectory() + @"\Cache\Cache.mdf");
+            DirectorySecurity dSecurity = dInfo.GetAccessControl();
+            dSecurity.AddAccessRule(new FileSystemAccessRule(new SecurityIdentifier(WellKnownSidType.WorldSid, null), FileSystemRights.FullControl, InheritanceFlags.ObjectInherit | InheritanceFlags.ContainerInherit, PropagationFlags.NoPropagateInherit, AccessControlType.Allow));
+            dInfo.SetAccessControl(dSecurity);
         }
     }
 }

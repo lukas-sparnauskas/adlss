@@ -61,7 +61,7 @@ namespace DarboLaikoSkaiciavimoSistema.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Working Time Tracking System.
+        ///   Looks up a localized string similar to Automatic Working Time Tracking System.
         /// </summary>
         public static string appName {
             get {

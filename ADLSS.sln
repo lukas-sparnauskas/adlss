@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WEBAPI", "WEBAPI\WEBAPI.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADLSS_ValdymoPrograma", "DarboLaikoSkaiciavimoSistema\ADLSS_ValdymoPrograma.csproj", "{02C0F8C4-8199-409E-966B-62BE803E5529}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ADLSS_Setup", "ADLSS_Setup\ADLSS_Setup.vdproj", "{FF47989D-5B3C-4410-A6E3-5894BC0B9F19}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ADLSS", "ADLSS\ADLSS.vdproj", "{135822DB-234E-45C0-9639-3E27EBC9F813}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,12 +43,12 @@ Global
 		{02C0F8C4-8199-409E-966B-62BE803E5529}.Release|x64.Build.0 = Release|x64
 		{02C0F8C4-8199-409E-966B-62BE803E5529}.Release|x86.ActiveCfg = Release|x86
 		{02C0F8C4-8199-409E-966B-62BE803E5529}.Release|x86.Build.0 = Release|x86
-		{FF47989D-5B3C-4410-A6E3-5894BC0B9F19}.Debug|Any CPU.ActiveCfg = Debug
-		{FF47989D-5B3C-4410-A6E3-5894BC0B9F19}.Debug|x64.ActiveCfg = Debug
-		{FF47989D-5B3C-4410-A6E3-5894BC0B9F19}.Debug|x86.ActiveCfg = Debug
-		{FF47989D-5B3C-4410-A6E3-5894BC0B9F19}.Release|Any CPU.ActiveCfg = Release
-		{FF47989D-5B3C-4410-A6E3-5894BC0B9F19}.Release|x64.ActiveCfg = Release
-		{FF47989D-5B3C-4410-A6E3-5894BC0B9F19}.Release|x86.ActiveCfg = Release
+		{135822DB-234E-45C0-9639-3E27EBC9F813}.Debug|Any CPU.ActiveCfg = Debug
+		{135822DB-234E-45C0-9639-3E27EBC9F813}.Debug|x64.ActiveCfg = Debug
+		{135822DB-234E-45C0-9639-3E27EBC9F813}.Debug|x86.ActiveCfg = Debug
+		{135822DB-234E-45C0-9639-3E27EBC9F813}.Release|Any CPU.ActiveCfg = Release
+		{135822DB-234E-45C0-9639-3E27EBC9F813}.Release|x64.ActiveCfg = Release
+		{135822DB-234E-45C0-9639-3E27EBC9F813}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

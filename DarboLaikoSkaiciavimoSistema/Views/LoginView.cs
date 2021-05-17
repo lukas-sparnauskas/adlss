@@ -2,6 +2,7 @@
 using DarboLaikoSkaiciavimoSistema.Controllers;
 using System;
 using System.Globalization;
+using System.IO;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -17,36 +18,45 @@ namespace DarboLaikoSkaiciavimoSistema.Views
         /// </summary>
         public LoginView()
         {
-            LocalCache.InitLocalCache();
-            int saved_user_id = LocalCache.GetSavedUserId();
-            Locale saved_locale = LocalCache.GetSavedLocale();
-            switch (saved_locale)
+            try
             {
-                case Locale.EN:
-                    Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en-GB");
-                    break;
-                case Locale.LT:
-                    Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("lt-LT");
-                    break;
+                LocalCache.SetDBAccess();
+                LocalCache.InitLocalCache();
+                int saved_user_id = LocalCache.GetSavedUserId();
+                Locale saved_locale = LocalCache.GetSavedLocale();
+                switch (saved_locale)
+                {
+                    case Locale.EN:
+                        Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en-GB");
+                        break;
+                    case Locale.LT:
+                        Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("lt-LT");
+                        break;
+                }
+
+                InitializeComponent();
+                SetLocalization();
+
+                if (saved_user_id != -1 && LoginController.CheckUserByID(saved_user_id) == 0)
+                {
+                    this.Hide();
+                    MainView mainView = new MainView();
+                    mainView.ShowDialog();
+                }
             }
-
-            InitializeComponent();
-            SetLocalization();
-
-            if (saved_user_id != -1 && LoginController.CheckUserByID(saved_user_id) == 0)
+            catch (Exception ex)
             {
-                this.Hide();
-                MainView mainView = new MainView();
-                mainView.ShowDialog();
+                File.AppendAllText(Directory.GetCurrentDirectory() + @"\log.txt", ex.Message);
             }
         }
-        
+
         /// <summary>
         /// Prisijungimo lango teksto nustatymas.
         /// </summary>
         public override void SetLocalization()
         {
             this.Text = Properties.Strings.loginViewName;
+            lblTitle.Text = Properties.Strings.appName;
             lblUsername.Text = Properties.Strings.lblUsername;
             lblPassword.Text = Properties.Strings.lblPassword;
             cbRememberMe.Text = Properties.Strings.cbRememberMe;
