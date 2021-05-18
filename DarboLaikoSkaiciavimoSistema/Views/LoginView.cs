@@ -18,35 +18,28 @@ namespace DarboLaikoSkaiciavimoSistema.Views
         /// </summary>
         public LoginView()
         {
-            try
+            LocalCache.SetDBAccess();
+            LocalCache.InitLocalCache();
+            int saved_user_id = LocalCache.GetSavedUserId();
+            Locale saved_locale = LocalCache.GetSavedLocale();
+            switch (saved_locale)
             {
-                LocalCache.SetDBAccess();
-                LocalCache.InitLocalCache();
-                int saved_user_id = LocalCache.GetSavedUserId();
-                Locale saved_locale = LocalCache.GetSavedLocale();
-                switch (saved_locale)
-                {
-                    case Locale.EN:
-                        Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en-GB");
-                        break;
-                    case Locale.LT:
-                        Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("lt-LT");
-                        break;
-                }
-
-                InitializeComponent();
-                SetLocalization();
-
-                if (saved_user_id != -1 && LoginController.CheckUserByID(saved_user_id) == 0)
-                {
-                    this.Hide();
-                    MainView mainView = new MainView();
-                    mainView.ShowDialog();
-                }
+                case Locale.EN:
+                    Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en-GB");
+                    break;
+                case Locale.LT:
+                    Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("lt-LT");
+                    break;
             }
-            catch (Exception ex)
+
+            InitializeComponent();
+            SetLocalization();
+
+            if (saved_user_id != -1 && LoginController.CheckUserByID(saved_user_id) == 0)
             {
-                File.AppendAllText(Directory.GetCurrentDirectory() + @"\log.txt", ex.Message);
+                this.Hide();
+                MainView mainView = new MainView();
+                mainView.ShowDialog();
             }
         }
 
