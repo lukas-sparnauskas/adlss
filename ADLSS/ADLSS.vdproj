@@ -267,6 +267,18 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_A523937226464175B3467ABAABCFDEE8"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_AC13B0D063864BF3869CF9110859DF4D"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_BCD364A5DD5F077A8745CA5B07D2076A"
         "OwnerKey" = "8:_16FF973F9F5A494686373EDCA78E9EB1"
         "MsmSig" = "8:_UNDEFINED"
@@ -455,12 +467,6 @@
         {
         "MsmKey" = "8:_FD50D2A694D21673F817FB5FA1BF6084"
         "OwnerKey" = "8:_16FF973F9F5A494686373EDCA78E9EB1"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_28BF75016DAAD81708200E8C8205C302"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -655,6 +661,12 @@
         "OwnerKey" = "8:_BEA98D45A2FFC466494E81B0004C328C"
         "MsmSig" = "8:_UNDEFINED"
         }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_28BF75016DAAD81708200E8C8205C302"
+        "MsmSig" = "8:_UNDEFINED"
+        }
     }
     "Configurations"
     {
@@ -673,6 +685,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -689,6 +709,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -1212,6 +1240,46 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A523937226464175B3467ABAABCFDEE8"
+            {
+            "SourcePath" = "8:..\\DarboLaikoSkaiciavimoSistema\\Cache\\Cache_log.ldf"
+            "TargetName" = "8:Cache_log.ldf"
+            "Tag" = "8:"
+            "Folder" = "8:_0FE920F1F28C4385882955FE3EEFBB06"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AC13B0D063864BF3869CF9110859DF4D"
+            {
+            "SourcePath" = "8:..\\DarboLaikoSkaiciavimoSistema\\Cache\\Cache.mdf"
+            "TargetName" = "8:Cache.mdf"
+            "Tag" = "8:"
+            "Folder" = "8:_0FE920F1F28C4385882955FE3EEFBB06"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_BCD364A5DD5F077A8745CA5B07D2076A"
@@ -1748,6 +1816,17 @@
             "Property" = "8:TARGETDIR"
                 "Folders"
                 {
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_0FE920F1F28C4385882955FE3EEFBB06"
+                    {
+                    "Name" = "8:Cache"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_8DBD012A063F4C4CABB5444D1C934907"
+                        "Folders"
+                        {
+                        }
+                    }
                 }
             }
         }
@@ -2288,7 +2367,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_16FF973F9F5A494686373EDCA78E9EB1"
             {
-            "SourcePath" = "8:..\\DarboLaikoSkaiciavimoSistema\\obj\\x64\\Release\\DarboLaikoSkaiciavimoSistema.exe"
+            "SourcePath" = "8:..\\DarboLaikoSkaiciavimoSistema\\obj\\x64\\Debug\\DarboLaikoSkaiciavimoSistema.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_9C4CD2AC5A224E9E8F86661EE4DB6E0D"
@@ -2308,34 +2387,6 @@
             "ProjectOutputGroupRegister" = "3:1"
             "OutputConfiguration" = "8:"
             "OutputGroupCanonicalName" = "8:Built"
-            "OutputProjectGuid" = "8:{02C0F8C4-8199-409E-966B-62BE803E5529}"
-            "ShowKeyOutput" = "11:TRUE"
-                "ExcludeFilters"
-                {
-                }
-            }
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_29CE2B97F35F4FDB8910A86EEA1BCC60"
-            {
-            "SourcePath" = "8:"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_9C4CD2AC5A224E9E8F86661EE4DB6E0D"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            "ProjectOutputGroupRegister" = "3:1"
-            "OutputConfiguration" = "8:"
-            "OutputGroupCanonicalName" = "8:Symbols"
             "OutputProjectGuid" = "8:{02C0F8C4-8199-409E-966B-62BE803E5529}"
             "ShowKeyOutput" = "11:TRUE"
                 "ExcludeFilters"
@@ -2370,34 +2421,6 @@
                 {
                 }
             }
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_3954F8980BF04C129E14F94FB57C53B8"
-            {
-            "SourcePath" = "8:"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_9C4CD2AC5A224E9E8F86661EE4DB6E0D"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            "ProjectOutputGroupRegister" = "3:1"
-            "OutputConfiguration" = "8:"
-            "OutputGroupCanonicalName" = "8:SourceFiles"
-            "OutputProjectGuid" = "8:{02C0F8C4-8199-409E-966B-62BE803E5529}"
-            "ShowKeyOutput" = "11:TRUE"
-                "ExcludeFilters"
-                {
-                }
-            }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_91D7EC4F3C0E441FB2DB22C615F7A890"
             {
             "SourcePath" = "8:"
@@ -2420,34 +2443,6 @@
             "ProjectOutputGroupRegister" = "3:1"
             "OutputConfiguration" = "8:"
             "OutputGroupCanonicalName" = "8:XmlSerializer"
-            "OutputProjectGuid" = "8:{02C0F8C4-8199-409E-966B-62BE803E5529}"
-            "ShowKeyOutput" = "11:TRUE"
-                "ExcludeFilters"
-                {
-                }
-            }
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_9B59E2CD9EAA4A518D30A5740DC1F8C9"
-            {
-            "SourcePath" = "8:"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_9C4CD2AC5A224E9E8F86661EE4DB6E0D"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            "ProjectOutputGroupRegister" = "3:1"
-            "OutputConfiguration" = "8:"
-            "OutputGroupCanonicalName" = "8:LocalizedResourceDlls"
             "OutputProjectGuid" = "8:{02C0F8C4-8199-409E-966B-62BE803E5529}"
             "ShowKeyOutput" = "11:TRUE"
                 "ExcludeFilters"
