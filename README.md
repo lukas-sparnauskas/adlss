@@ -2,8 +2,8 @@
 
 Bachelor's Final Degree Project
 
-<b>Automatic Working Time Tracking System</b>
-(Lithuanian) Automatinė darbo laiko sekimo sistema
+<b>Automatic Working Time Tracking System</b><br>
+<i>(Lithuanian) Automatinė darbo laiko sekimo sistema</i>
 
 The proposed system prototype consists of these hardware and software components:
 <ul>
